@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Task - 4</title>
+</head>
+<body>
+    <h3>Show current Date and Time in India</h3>
+    <button onclick="showDate()">Show Date</button><br/>
+    <p id="date"></p><br/>
+    <button onclick="showTime()">Show Time</button><br/>
+    <p id="time"></p>
+    <script>
+        function showDate() {
+            const now = new Date();
+            const indiaTime = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
+            const dateElement = document.getElementById('date');
+            dateElement.textContent = `Current Date in India: ${indiaTime.toLocaleDateString()}`;
+        }
+        function showTime() {
+            const now = new Date();
+            const indiaTime = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
+            const timeElement = document.getElementById('time');
+            timeElement.textContent = `Current Time in India: ${indiaTime.toLocaleTimeString()}`;
+        }
+    </script>
+</body>
+</html>

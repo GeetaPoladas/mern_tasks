@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Task - 1</title>
+</head>
+<body>
+    <h3>Write a JavaScript function that reverse a number.</h3>
+    <label for="number">Number:</label>
+    <input type="text" id="number"/>
+    <br/>
+    <label for="reversedNumber">Reversed Number:</label>
+    <input type="text" id="reversedNumber" readonly />
+    <br/>
+    <button onclick="reverseNumber()">Reverse</button>
+    <script>
+        function reverseNumber() {
+          var number = document.getElementById("number").value;
+          var reversedNumber = number.split('').reverse().join('');
+          document.getElementById("reversedNumber").value = reversedNumber;
+        }
+    </script>
+</body>
+</html>

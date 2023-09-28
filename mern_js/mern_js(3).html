@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Task - 3</title>
+</head>
+<body>
+    <h3>Write a JavaScript program to calculate multiplication and division of two numbers (input from user).</h3>
+    <label for="n1">1st Number:</label>
+    <input type="text" id="n1" /><br/>
+    <label for="n2">2nd Number:</label>
+    <input type="text" id="n2" /><br/>
+    <button onclick="calculateProduct()">Multiply</button>
+    <button onclick="calculateDivide()">Divide</button>
+    <p id="result"></p>
+    <script>
+    function calculateProduct() {
+        var n1 = parseInt(document.getElementById("n1").value);
+        var n2 = parseInt(document.getElementById("n2").value);
+        var product = n1 * n2;
+        const answer = document.getElementById("result");
+        answer.textContent = `The result is : ${ product }`;
+    }
+    function calculateDivide() {
+        var n1 = parseInt(document.getElementById("n1").value);
+        var n2 = parseInt(document.getElementById("n2").value);
+        var divide = n1 / n2;
+        const answer = document.getElementById("result");
+        answer.textContent = `The result is : ${ divide }`;
+    }
+    </script>
+</body>
+</html>
